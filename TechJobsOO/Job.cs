@@ -3,7 +3,7 @@ namespace TechJobsOO
 {
     public class Job
     {
-        public int Id { get; }
+        public int Id { get; set; }
         private static int nextId = 1;
 
         public string Name { get; set; }
