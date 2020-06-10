@@ -34,5 +34,25 @@ namespace TechJobsTests
                 testJob.JobCoreCompetency == jobCoreCompetency
             );
         }
+
+        [TestMethod]
+        public void TestJobsForEquality()
+        {
+            string name = "Product Tester";
+            var employerName = new Employer("ACME");
+            var jobLocation = new Location("Desert");
+            var jobType = new PositionType("Quality Control");
+            var jobCoreCompetency = new CoreCompetency("Persistence");
+
+            string name2 = "Product Tester";
+            var employerName2 = new Employer("ACME");
+            var jobLocation2 = new Location("Desert");
+            var jobType2 = new PositionType("Quality Control");
+            var jobCoreCompetency2 = new CoreCompetency("Persistence");
+
+            var testJob1 = new Job(name, employerName, jobLocation, jobType, jobCoreCompetency);
+            var testJob2 = new Job(name, employerName, jobLocation, jobType, jobCoreCompetency);
+            Assert.IsFalse(testJob1.Equals(testJob2));
+        }
     }
 }
