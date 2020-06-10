@@ -22,6 +22,23 @@ namespace TechJobsOO
                 Console.WriteLine(job);
             }
             */
+
+
+            string name = "Product Tester";
+            var employerName = new Employer("ACME");
+            var jobLocation = new Location("Desert");
+            var jobType = new PositionType("Quality Control");
+            var jobCoreCompetency = new CoreCompetency("Persistence");
+
+            var testJob1 = new Job();
+            var testJob2 = new Job();
+
+
+            var testJob = new Job(name, employerName, jobLocation, jobType, jobCoreCompetency);
+
+            Console.WriteLine(testJob1.Id);
+            Console.WriteLine(testJob2.Id);
+            Console.WriteLine(testJob.Id);
         }
     }
 }
